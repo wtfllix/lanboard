@@ -1,4 +1,4 @@
-# 📝 局域网告示板 - LAN Notice Board
+# 📝 局域网剪贴板 - LAN ClipBoard
 
 一个轻量级、功能完整的局域网共享告示板系统，支持历史记录管理和移动端完美适配。（Powered by kimi V2）
 

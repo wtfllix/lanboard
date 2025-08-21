@@ -1,0 +1,39 @@
+# 使用更小的基础镜像
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production && npm cache clean --force
+
+FROM node:18-alpine AS runtime
+
+# 安装curl用于健康检查
+RUN apk add --no-cache curl
+
+WORKDIR /app
+
+# 复制node_modules
+COPY --from=builder /app/node_modules ./node_modules
+COPY package*.json ./
+COPY notice-board.js ./
+
+# 创建数据目录
+RUN mkdir -p /app/data
+
+# 设置环境变量
+ENV NODE_ENV=production
+ENV PORT=3007
+
+# 创建非root用户
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+
+RUN chown -R nodejs:nodejs /app
+USER nodejs
+
+EXPOSE 3007
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:3007/ || exit 1
+
+CMD ["node", "notice-board.js"]

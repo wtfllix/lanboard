@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker --version)",
+      "Bash(docker run:*)",
+      "Bash(docker logs:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(node:*)",
+      "Bash(docker-compose:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,6 +1,6 @@
 # 📝 局域网告示板 - LAN Notice Board
 
-一个轻量级、功能完整的局域网共享告示板系统，支持历史记录管理和移动端完美适配。
+一个轻量级、功能完整的局域网共享告示板系统，支持历史记录管理和移动端完美适配。（Powered by kimi V2）
 
 ![Node.js Version](https://img.shields.io/badge/node-%3E%3D18-green.svg)
 ![Docker](https://img.shields.io/badge/docker-supported-blue.svg)
@@ -28,7 +28,7 @@
 
 ### 🐳 Docker 部署（推荐）
 ```bash
-git clone https://github.com/[your-username]/lan-notice-board.git
+git clone https://github.com/wtfllix/lan-notice-board.git
 cd lan-notice-board
 docker-compose up -d
 ```
@@ -36,7 +36,7 @@ docker-compose up -d
 
 ### 🏃 传统部署
 ```bash
-git clone https://github.com/[your-username]/lan-notice-board.git
+git clone https://github.com/wtfllix/lan-notice-board.git
 cd lan-notice-board
 npm install
 node notice-board.js
@@ -142,7 +142,7 @@ docker run -v /host/data:/app/data notice-board
 
 ### **开发环境**
 ```bash
-git clone https://github.com/[your-username]/lan-notice-board.git
+git clone https://github.com/wtfllix/lan-notice-board.git
 cd lan-notice-board
 npm install
 npm run dev  # 如果有开发脚本

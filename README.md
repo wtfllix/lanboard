@@ -154,7 +154,7 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=[your-username]/lan-notice-board&type=Date)](https://star-history.com/#[your-username]/lan-notice-board)
+[![Star History Chart](https://api.star-history.com/svg?repos=wtfllix/lanboard&type=Date)](https://star-history.com/#[your-username]/lan-notice-board)
 
 ---
 
